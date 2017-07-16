@@ -1,0 +1,35 @@
+.wdg_form_section{
+border: solid 1px red;
+width: 500px;
+height: 700px;
+margin: auto;
+position: relative;
+}
+
+.wdg_section_wait{
+border: solid 1px blue;
+position: absolute;
+margin: auto;
+top: 0;
+background: black;
+opacity: 0.7;
+width: 500px;
+height: 700px;
+}
+
+.wdg_section_wait_data{ 
+background-color: #433F3F;
+opacity: none;
+width: 222px;
+height: 45px;
+text-align: center;
+}
+
+.wdg_section_wait .datas{
+color: #fff;
+background:url('img/refresh-green.gif') no-repeat left;
+background-size:25px 25px;
+padding-left: 30px;
+font-size: 18px;
+margin:28px;
+}

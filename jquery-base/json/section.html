@@ -1,0 +1,160 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="section.js"></script>
+<link rel="stylesheet" type="text/css" href="section.css">
+</head>
+<body>
+
+<div class="wdg_form_section">
+	<form name="frmSection" action="#">
+		<div class="bouton-submit">
+			<button class="button-submitn">valider</button>
+		</div>
+			
+		<div class="section-save-ok"></div>
+		<div class="section-save-ko"></div>
+	
+		<table class="formulaire-block" border="0">	
+	
+			<tr>
+				<th>Titre<span class="champsRequired">*</span></th>
+				<td>titre</td>
+			</tr>
+				
+			<tr>
+				<th>Langue<span class="champsRequired">*</span></th>
+				<td>
+					<select name="langue">
+						<option value="0" >---&gt;Choisir&lt;---</option>
+						<option value="0" >---&gt;FR&lt;---</option>
+					</select>
+				</td>
+			</tr>
+			
+			<tr>
+				<th rowspan="2">Type<span class="champsRequired">*</span></th>
+				<td>
+					<input class="wdg_unvalidate" type="checkbox" name="typesProduit" value="off">offre</input>
+					<input class="wdg_unvalidate" type="checkbox" name="typesProduit" value="sof">sous-offre</input>
+					<input class="wdg_unvalidate" type="checkbox" name="typesProduit" value="occ">occupation</input>
+				</td>
+			</tr>
+	
+			<tr>
+				<td>
+					<div class="produit-options">
+							<input class="wdg_unvalidate" type="checkbox" name="produitOptions" value="seance">offres &agrave; s&eacute;ances</input> 
+							<input class="wdg_unvalidate" type="checkbox" name="produitOptions" value="permanent">Permanent</input>
+					</div>
+				</td>
+			</tr>
+			
+			<tr>
+				<th colspan="2">Activites</th>
+			</tr>
+			<tr>
+				<td colspan="2">
+				</td>
+			</tr>		
+		
+			<tr>
+				<th colspan="2">Themes</th>
+			</tr>
+			<tr>
+				<td colspan="2">
+	
+				</td>
+			</tr>	
+	
+			<tr>
+				<th colspan="2">Publics</th>
+			</tr>		
+			<tr>
+				<td colspan="2">
+				</td>
+			</tr>
+						
+		</table>
+		
+		<hr class="produit-separator">
+		
+		<!-- zone de selecton des produits unitaires. -->
+		<div class="wdg_produit">
+			<!-- zone de presentation des produits. -->
+			<div class="wdg_produit_all">
+	
+				<div class="item parent-1">
+					<script type="json/init-parent-data">
+				{
+				"id" : "10",
+				"type" : "OFF",
+				"options" : {"seances":false, "permanent":true},
+				"activites" : [1000,1002],
+				"themes" : [],
+				"publics" : [1002,1003,1004,1005]
+				}
+				</script>
+					bloc-1
+				</div>
+				
+				<!-- second div -->
+				<div class="item parent-2">
+					<script type="json/init-parent-data">
+				{
+				"id" : "11",
+				"type" : "OCC",
+				"activites" : [984],
+				"themes" : [212],
+				"publics" : [703]
+				}
+				</script>
+					bloc-2
+				</div>
+				
+				<!-- third div -->
+				<div class="item parent-3">
+					<script type="json/init-parent-data">
+				{
+				"id" : "12",	
+				"type" : "SOF",
+				"options" : {"seances":false, "permanent":true},
+				"activites" : [1000,1002],
+				"themes" : [404],
+				"publics" : [1002]
+				}
+				</script>
+					bloc-3
+				</div>
+	
+	
+			</div><!-- div de selection des produits. -->
+			
+			<!-- boutons de selections des produits. -->
+			<div class="wdg_produit_button">
+				<p><b>Affecter&nbsp;/&nbsp;Supprimer</b></p>
+				<button class="wdg_produit_add" type="button">&nbsp;&nbsp;&gt;&gt;&nbsp;&nbsp;</button><br/>
+				<button class="wdg_produit_remove" type="button">&nbsp;&nbsp;&lt;&lt;&nbsp;&nbsp;</button>
+			</div>
+			<!-- zone des produits selectionnes. -->
+			<div class="wdg_produit_select">
+	
+					<select name="selectedProduits" multiple="multiple">			
+							<option value="456#occ">occupation-test</option>
+							<option value="456#occ">offre-test</option>
+					</select>
+						
+			</div>
+		</div>
+	
+	</form>
+	<div class="wdg_section_wait">
+		<div class="wdg_section_wait_data">
+			<div class="datas">Mise &agrave; jour des produits.</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

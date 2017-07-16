@@ -1,0 +1,14 @@
+p{
+border: solid 1px black;
+overflow: hidden;
+text-overflow: ellipsis;
+}
+
+.button-ellipsis{
+background-color: red;
+width: 115px;
+}
+
+.wdg_ellipsisable{
+height: 200px;	
+}

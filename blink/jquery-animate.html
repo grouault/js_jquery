@@ -1,0 +1,20 @@
+<html>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript">
+  $(function () {
+      with($("b").css("color","#FF0000"))
+        setInterval(function () {
+            animate({
+              opacity : css("opacity") < 1 ? 1 : 0.3
+            },100 );
+        }, 500)
+    });
+</script>
+<body>
+<tt> ça clignote pas </tt> 
+<b> ça clignote</b>
+<tt> ça clignote pas </tt> 
+<b> ça clignote</b>
+<tt> ça clignote pas </tt> 
+</body>

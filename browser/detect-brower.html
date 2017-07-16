@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+  p { color:green; font-weight:bolder; margin:3px 0 0 10px; }
+  div { color:blue; margin-left:20px; font-size:14px; }
+  span { color:red; }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="detect-browser.js"></script>
+  <script type="text/javascript">
+  
+  	$(function(){
+  
+  	  $('.js-button').click(function(){
+  	    alert(getBrowserName());
+  	  });
+  	  
+  	});
+  
+
+	
+  </script>
+
+</head>
+<body>
+<div class="with-javascript">
+	<span>javascript:</span>
+	<input type="button" class="js-button" value="js-button" />
+</div>
+
+<div class="with-jquery">
+	<span>jquery:</span>
+	<script>
+	jQuery.each(jQuery.browser, function(i, val) {
+	  $("<div>" + i + " : <span>" + val + "</span>")
+	            .appendTo( document.body );
+	});
+	</script>
+</div>
+
+
+</body>
+</html>

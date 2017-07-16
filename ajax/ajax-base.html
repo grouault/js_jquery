@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <title>Insert title here</title>
+  <style type="text/css">
+  .reponse{
+  border: solid 1px red;
+  width: 300px;
+  height: 250px;
+  }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script type="text/javascript">
+  function connectService() {
+  	var ws = "http://prodsrv1/thales/installimp.as";
+    $.ajax({
+  		url: ws,
+  		dataType : "html",
+  		success: function(response){
+  			$(".reponse").html(response);
+  		},
+  	    statusCode: {
+  	      404: function() {
+  	        alert('page not found');
+  	      }
+  	    }, 		
+  		error: function(jqXHR, textStatus, errorThrown) {
+  			alert("Erreur Service EXO : [wsLogin] " + jqXHR.statusText + "(" + jqXHR.status + ")") ;
+  		}
+  	});
+  }
+  
+  function handleSuccess(data,textStatus){
+    alert("Success = " + textStatus);  
+  }
+  
+  function handleError(){
+    alert("Error");
+  }
+  
+  $(document).ready(function() {
+    connectService();
+  });  
+  </script>
+</head>
+<body>
+  <div class="content">
+    ajax-base
+    <hr/>   
+    <div class="reponse">
+    </div>
+   <iframe>
+   </iframe>
+
+</div>
+</body>
+</html>

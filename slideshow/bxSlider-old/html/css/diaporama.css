@@ -1,0 +1,62 @@
+.left-content {
+    float: left;
+    margin: 0 1em 0 0;
+    width: 700px;
+    border: solid 1px #000;
+}
+
+.mainBoxSlider{
+position:relative;
+width: 400px; /* fixe la largeur du diaporama : div englobant. */
+height: 250px;
+margin: auto;
+/* margin: 1em 0; */
+}
+
+.mainBoxWrapper{
+background-color: #ffffff;
+border-radius: 4px 4px 4px 4px;
+/* box-shadow: 0 0 3px 2px rgba(51, 51, 51, 0.15); */
+}
+
+.sliderItem {
+position: relative;
+background-color: gray;
+}
+.sliderItem .sliderPic img {
+border-radius: 4px 4px 4px 4px;
+margin:auto;
+}
+.sliderItem .sliderContent {
+    background: url("img/slider_content_bg.png") repeat scroll 0 0 transparent;
+    border-radius: 0 0 4px 4px;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    height: 90px;
+}
+
+.sliderItem .sliderContentWrapper{
+margin-left: 20px;
+/* margin-right: 20px; */
+}
+
+.sliderItem .sliderContent .sliderContentWrapper {
+padding: 8px 50px 10px 25px;
+color: #FFFFFF;
+font-size: 14px;
+}
+.sliderItem .sliderContent .newsTopic {
+    color: #FFFFFF;
+}
+.sliderItem .sliderContent .newsTitle {
+ /* font-size: 2.6em; */
+ margin: 0.2em 0;
+ font-size: 17px;
+}
+.sliderItem .sliderContent .newsTitle a {
+    color: #FFFFFF;
+}
+.bx-wrapper {
+    position: relative;
+}

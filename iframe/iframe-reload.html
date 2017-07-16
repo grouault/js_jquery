@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Iframe-reload</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script src="iframe-reload.js" language="javscript" type="text/javascript"></script>
+<!-- 
+Site :
+http://www.dyn-web.com/tutorials/iframes/basics.php
+-->
+</head>
+<body>
+<h3>iframe reload</h3>
+<iframe id="dashboard" name="dashboard" class="js_reloaderFrame" frameborder="2" src="http://www.w3.org/" width="100%" height="500" style="border-top: 1px solid black;"></iframe>
+<div class="javascript-reload">
+  <h4>javascript-reload</h4>
+  <button class="reload">reload</button>
+  <button class="loadNewUrl">new-url</button>
+  <button class="reload-test">reload-test</button>
+</div>
+<div class="html-reload">
+	<h4>html-reload</h4>
+	<a href="http://validator.w3.org/" target="dashboard">validator w3c</a>
+	<a href="content-iframe.html" target="dashboard">page-html</a>
+	<a class="link-reload">reload par event</a>
+</div>
+
+</body>
+</html>

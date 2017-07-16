@@ -1,0 +1,67 @@
+body {
+	margin: 0px;
+	padding: 0px;
+	background: #eeebce;
+}
+
+.ap_outer h1 {
+	border: 1px solid #4297d7;
+	background: #2191c0
+		url(css/custom-theme/images/ui-bg_diagonals-small_75_2191c0_40x40.png)
+		50% 50% repeat;
+	color: #eaf5f7;
+	font-weight: bold;
+	width : 50%;
+	padding: 0.5em;
+	margin: 0em inherit;
+	margin: 0em auto;
+	font-family: monospace;
+}
+
+.xrg {
+	border: 1px solid #4297d7;
+	background: #2191c0
+		url(css/custom-theme/images/ui-bg_diagonals-small_75_2191c0_40x40.png)
+		50% 50% repeat !important;
+	color: #eaf5f7;
+}
+
+.ap_outer {
+	overflow: hidden;
+}
+
+.ap_actions {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+.ap_container {
+	position: absolute;
+	top: 40px;
+	left: 5px;
+	right: 5px;
+	bottom: 5px;
+	background: #00000;
+	overflow: hidden;
+}
+
+.ap_content {
+	position: absolute;
+	padding: 0px;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	overflow: auto;
+	top: 0px;
+}
+
+.slide_border {
+	position: relative;
+	width: 600px;
+	height: 500px;
+	border: 2px solid black;
+	overflow: hidden;
+	margin :1em;
+}

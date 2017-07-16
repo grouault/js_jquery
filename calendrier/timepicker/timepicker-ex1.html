@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- 
+  http://trentrichardson.com/examples/timepicker/
+  http://www.jquery4u.com/plugins/10-jquery-time-picker-plugins/
+  http://haineault.com/media/jquery/ui-timepickr/page/
+  -->
+<link href="http://code.jquery.com/ui/1.9.1/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link href="./css/jquery-timepicker.css" rel="stylesheet" type="text/css"/>
+<script src="http://code.jquery.com/jquery-1.8.2.min.js" type="text/javascript"></script>
+<script src="http://code.jquery.com/ui/1.9.1/jquery-ui.min.js" type="text/javascript"></script>
+<script src="./js/jquery-slider-access.js"></script>
+<script src="./js/jquery-timepicker.js"></script>
+  
+  <script>
+  $(document).ready(function() {
+        
+    $("#datepicker").datepicker({
+	    changeMonth: true,
+	    changeYear: true,
+	    showTimePicker : true,
+	    dateFormat: 'dd/mm/yy',
+	    dayNamesMin: ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'],
+	    monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Jui','Juil','Aou','Sep','Oct','Nov','Dec']
+    });
+  	
+    $("#datetimepicker2").datetimepicker({
+	    changeMonth: true,
+	    changeYear: true,
+	    dateFormat: 'dd/mm/yy',
+	    timeFormat: 'HH:mm',
+	    timeText : 'Temps',
+	    hourText : 'Heure',
+	    hourMax : '22',
+	    hourMin : '08',
+	    minuteText : 'Minute',
+	    dayNamesMin: ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'],
+	    monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Jui','Juil','Aou','Sep','Oct','Nov','Dec']
+  	});
+  	  	
+    $('#basic').datetimepicker({
+	    changeMonth: true,
+	    changeYear: true,
+	    dateFormat: 'dd/mm/yy',
+	    timeFormat: 'HH:mm',
+	    timeText : 'Temps',
+	    hourText : 'Heure',
+	    hourMin : 8,
+	    hourMax : 22,
+	    minuteText : 'Minute',
+	    dayNamesMin: ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'],
+	    monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Jui','Juil','Aou','Sep','Oct','Nov','Dec'],
+    	currentText: 'Maintenant',
+    	closeText: 'Fermer'
+  	});
+  	
+  });
+  
+  </script>
+</head>
+<body style="font-size:62.5%;">
+ <hr/>
+<div type="text" id="datepicker"></div>
+<hr/>
+<div type="text" id="datetimepicker2"></div>
+<hr/>
+<input id="basic" type="text" value="" name="basic_example_3" />
+
+</body>
+</html>

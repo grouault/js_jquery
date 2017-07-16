@@ -1,0 +1,13 @@
+# Element de compréhension du script d'inactivité.
+##
+- Bind : accrocher à l'élément le traitement.
+		function(i,e) ==> index, element(chaine de caractère).
+	Quand l'évènement intervient, l'action associé se déclenche.
+	
+- $each ==> evenment d'ihm.
+						on capte les evènement d'ihm.
+						
+- this.data
+		==> checker setTimeOut() et clearTimeOut()
+		
+- trigger : permet de déclencher un evènement.

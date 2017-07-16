@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+ <!--
+	http://eisabainyo.net/weblog/2009/04/28/open-link-in-a-new-window-using-jquery/
+	http://pierrebertet.net/projects/jquery_simpletooltip/
+	http://wiki.jqueryui.com/w/page/12138112/Tooltip
+	--> 
+	
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  
+  <script>
+	$(function() {
+  		
+		$(".linkmanif").click(function () { 
+			var $elf = this;
+			var initData = $.parseJSON($elf.rel);
+			var idCs = initData.idCs;
+			var urlPage = initData.urlPage;
+			alert("idCs = " + idCs);
+			alert("urlPage = " + urlPage);
+		});
+		
+  		$(".linkmanif2").click(function () { 
+			window.open( $(this).attr('href') );
+			return false;
+		});		
+		
+		$(".linkmanif2").mouseover(function () { 
+			var idCs = "#resume-" + this.rel;
+			$(idCs).show();
+		});	
+		
+		$(".linkmanif2").mouseleave(function () { 
+			var idCs = "#resume-" + this.rel;
+			$(idCs).hide();
+		});	
+		
+	})		
+  </script>
+  
+</head>
+<body>
+  
+	<a class="linkmanif" rel='{"idCs" : "idCS1", "urlPage":"http://www.voila.fr"}'> link manif</a>
+	<a class="linkmanif" rel='{"idCs" : "idCS2", "urlPage":"cs/ContentServer?pagename=OpenMarket/test"}'> link manif</a>
+	
+	<hr>
+	Link to use:<br/>
+	<!-- link1 -->
+	<a class="linkmanif2" href="http://www.voila.fr" rel="idcs1"> link manif 2.1</a>
+	<div id="resume-idcs1" style="display: none;">
+		resume-manif2
+	</div>
+	<br/>
+	<!-- link2 -->
+	<a class="linkmanif2" href="http://www.google.fr" rel="idcs2"> link manif 2.2</a>
+	<div id="resume-idcs2" style="display: none;">
+		resume-manif2
+	</div>
+	
+	<hr>
+	
+	<a href="http://google.fr" target="_blank" class="myPopup">Open popup window.</a>
+	<script type="text/javascript>
+	   $("a.myPopup").open({
+		  width: 400,
+		  height: 300,
+		  scrollbars: false
+	   });
+	</script>
+	
+</body>
+</html>

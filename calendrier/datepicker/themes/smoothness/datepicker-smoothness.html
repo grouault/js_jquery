@@ -1,0 +1,42 @@
+<html>
+<head>
+ 
+		<link type="text/css" href="css/smoothness/jquery-ui-1.8.9.custom.css" rel="stylesheet" />	
+		<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.8.9.custom.min.js"></script>
+  
+
+                <meta charset="utf-8">
+               
+</head>
+<body>
+ 
+  <div class="demo">
+ 
+  <script>
+  $(function() {
+   $( ".wdg_datepicker" ).datepicker({
+    changeMonth: true,
+    changeYear: true,
+    dateFormat: 'dd/mm/yy',
+     dayNamesMin: ['Di', 'Lu', 'Ma', 'Me', 'Je', 'Ve', 'Sa'],
+     monthNamesShort: ['Jan','Fev','Mar','Avr','Mai','Jui','Juil','Aou','Sep','Oct','Nov','Dec']
+ });
+    
+    
+  });
+  </script>            
+ 
+  <p>Date: <input class="wdg_datepicker" /></p>
+  <p>Date: <input class="wdg_datepicker" /></p>
+ 
+  </div><!-- End demo -->
+ 
+ 
+ 
+  <div class="demo-description">
+  <p>The datepicker is tied to a standard form input field.  Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay.  Choose a date, click elsewhere on the page (blur the input), or hit the Esc key to close. If a date is chosen, feedback is shown as the input's value.</p>
+  </div><!-- End demo-description -->
+               
+</body>
+</html>

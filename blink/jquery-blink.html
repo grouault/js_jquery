@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+ <!--
+	http://eisabainyo.net/weblog/2009/04/28/open-link-in-a-new-window-using-jquery/
+	http://pierrebertet.net/projects/jquery_simpletooltip/
+	http://wiki.jqueryui.com/w/page/12138112/Tooltip
+	http://stackoverflow.com/questions/6594606/how-to-clear-interval-of-clicked-element
+	--> 
+	
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <script src="js/jquery-blink.js" language="javscript" type="text/javascript"></script>
+  <script type="text/javascript" language="javascript">
+  $(document).ready(function(){
+	$('.blink').blink(); // default is 500ms blink interval.
+	//$('.blink').blink(100); // causes a 100ms blink interval.
+  });
+  </script>
+  <style type="text/css">
+  .blink{
+  color:red;
+  font-weight: bold;
+  }
+  </style>
+  
+</head>
+<body>
+<p>
+Voici la présentation d'un texte blink-blink:<br/>
+<span class="blink">Ceci est un texte blink-blink</span>
+</p>
+</body>
+</html>

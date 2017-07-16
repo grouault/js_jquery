@@ -1,0 +1,9 @@
+# Notes-calendar
+##
+
+Taille du calendar:
+-------------------
+Jouer sur la propriété "font-size" de la classe : datepicker
+.datepicker{
+font-size: 62.5%;
+}

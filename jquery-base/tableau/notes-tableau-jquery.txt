@@ -1,0 +1,6 @@
+# tableau jquery
+##
+
+Fonction jQuery : 
+-----------------
+.get() :transforme un objet tableau jQuery en tableau d'élément du DOM.

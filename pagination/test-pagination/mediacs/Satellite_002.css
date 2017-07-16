@@ -1,0 +1,106 @@
+body{margin:0px;padding:0px;}
+.site,.site-positionner{margin:0px;padding:0px;}
+.site{position:relative;width : 820px;margin : 0 auto;}
+.titre-header>*,.accueil>*{
+margin:0px;padding:0px;
+list-style:none;display:inline-block;
+vertical-align:top;text-align:left;}
+.titre-header,.accueil{
+margin:0px;padding:0px;
+text-align:left;}
+.image-laterale-gauche,.image-laterale-droite{
+position:absolute;background:#EFEFEF;
+width:17px;height:100%;
+top:0px;left:820px;}
+.image-laterale-gauche{left:-17px;}
+
+.preface { padding-bottom: 20px; padding-left: 10px; padding-right: 10px; display: block;}
+.postface{ padding-bottom: 20px; padding-left: 10px; padding-right: 10px; display: block;}
+
+.colonne-gauche {vertical-align : top;width : 245px;}
+.header {margin : 0px;}
+.bandeau-haut {margin: 0px;height : 8px;background:#EFEFEF;}
+.titre-header {width : 786px;margin:0px;padding : 0px; }
+.logo-cite {position:absolute;top:19px;left:14px;}
+.titre {width:100%;text-align:center;}
+.image-expo {position:absolute;top:19px;left:520px;}
+.logo-mediatheque {position:absolute;top:19px;right:14px;}
+.lien-droite {position:absolute;top:19px;right:14px;font-size: 12px;}
+.bandeau-lien {background-color : #EFEFEF;vertical-align : top;}
+.bandeau-lien a {text-decoration:none;}
+
+.icone_lien {width:245px;height:20px;text-align:center;}
+.icone_impression ,.icone_credit ,
+.icone_incontournable ,.icone_accueil, .icone_rss {display : inline;padding:0 1%;}
+.elt-detail-positionner,.accueil, .content {margin:0px;padding:0px;position:relative;}
+.accueil>*{height:100%;}
+.visuel-gauche {width : 245px;}
+.rubrique {width : 455px;padding : 0px 10px 10px 10px;background : #EFEFEF; font-size: 14px;}
+.accueil .content>*{margin:0px;padding:0px;list-style:none;display:inline-block;vertical-align:top;text-align:left;}			
+.visuel-gauche .copyright{font-size: 10px; text-align: center; color: #EFEFEF;}
+
+.footer {background : #AAAAAA;font-family:sans-serif;font-size: 10px;padding-left:40px;color:#ffffff;}	
+	
+/* bloc pagination. */
+.pager{ display: block;text-align: center;height: 16px;margin-bottom: 10px;z-index:100;}
+.numpage{ display: inline-block; color: #000;font-size: 11px;font-weight: bold;font-family: sans-serif;vertical-align: top;}
+.previous-page, .next-page{ display: inline-block;}
+.elt-topic-filter,.elt-topic-filter *,.elt-notice-filter,.elt-notice-filter *{font-size: 11px;font-family: sans-serif;}
+.elt-topic-filter{position:absolute;right:0;top:0;width:380px;}
+.elt-notice-filter{position:absolute;right:0;top:20px;width:380px;}
+
+
+/** 
+Liens HomePage - Header.
+*/
+.lien-droite ul{ list-style-type: none;}
+.lien-droite a{background-repeat: no-repeat;background-position: left;font-size: 13px;font-weight: bold;text-decoration: none;}
+
+.lien-droite .icone_rouge{ background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/rouge.gif);}
+.lien-droite .icone_rougec{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/rougec.gif);}
+.lien-droite .icone_rougef{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/rougef.gif);}
+.lien-droite .icone_bleuc{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/bleuc.gif);}
+.lien-droite .icone_bleuf{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/bleuf.gif);}
+.lien-droite .icone_bleu{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/bleu.gif);}
+.lien-droite .icone_bleu{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/bleu.gif);}
+.lien-droite .icone_jaune{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/jaune.gif);}
+.lien-droite .icone_jaunec{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/jaunec.gif);}
+.lien-droite .icone_jaunef{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/jaunef.gif);}
+.lien-droite .icone_vert{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/vert.gif);}
+.lien-droite .icone_vertc{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/vertc.gif);}
+.lien-droite .icone_vertf{background-image: url(http://webdev.citepro.cite-sciences.fr/mediacs/images/pointdoc/vertf.gif);}
+
+/******************************/
+/** Affichage des references **/
+/******************************/
+.PtD_LivreDoc-titre-libelle { display:none;}
+.details {background : #f2f2f2;}
+.elt-logo .copyright{position : relative;font-size : 10px;top : -14px;color : white;	background : black;opacity : 0.5;}
+.elt-logo .copyright:hover{background : transparent;}
+.elt-logo{width: 105px;vertical-align: middle;}
+.elt-entete{width: 30px;vertical-align: top;}
+
+
+/** style des notices */
+.notice img{width: 100px;margin-right: auto;margin-left: auto;display: block;border: none;}
+.elt-logo, .elt-entete, .elt-detail-positionner{display: inline-block;} 
+.elt-attribute{ display: list-item;list-style-type: none;}
+.elt-picto{background: #F2F2F2;}
+.elt-picto img{display: block;width: 28px;}
+.notice label{text-align: justify;color: #000;}
+.elt-title,.notices .elt-title a{text-decoration: none;color: #1E6495;}
+.elt-title a:hover{text-shadow: 0px 0px 9px #777;}
+.notices > li {margin:0 0 5px 6px; display: inline-block;width: 400px;border: 1px solid gray; background: #EFEFEF; }
+.notice { margin:0px;overflow:hidden;}
+.notices{padding:0;margin:0;}
+
+
+.elt-detail-notice{display:inline-block;width:500px;overflow:hidden;vertical-align:top;background:#EFEFEF;}
+.elt-detail-rubrique{display:inline-block;width:310px;height:400px;background:#EFEFEF;overflow-y:scroll;}
+.elt-detail-rubrique .notice {margin:10px;background:#FFFFFF;}
+.elt-detail-rubrique .notice>* {display:inline-block;vertical-align:top;}
+.elt-detail-rubrique .notice .elt-detail-positionner,
+.elt-detail-rubrique .notice .elt-detail-content {display:inline-block;width:120px;}
+.elt-detail-header{display:inline-block;width:820px;}
+
+.clear {display:none;}

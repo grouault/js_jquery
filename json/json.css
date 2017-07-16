@@ -1,0 +1,10 @@
+.item{
+display: block;
+border: solid 1px red;
+}
+.produit-selected{
+background-color: yellow;	
+}
+.disable-product{
+background-color: gray;
+}

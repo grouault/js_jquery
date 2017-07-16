@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+	<meta charset="utf-8">
+	<title>Basic usage of the jQuery UI dialog</title>
+
+	<link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/themes/base/jquery-ui.css">
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="dialog-html-session.js"></script>
+	
+</head>
+<body>
+
+<p>This is an example from the Nemikor Blog article <a href="http://blog.nemikor.com/2009/04/08/basic-usage-of-the-jquery-ui-dialog/">Basic usage of the jQuery UI dialog</a>.</p>
+
+<!-- structure de l'opener -->
+<div class="session-data" rel="med512">
+	<div class="session-value">11:12:13</div>
+	<button class="session-opener">valider</button>
+	<button class="session-opener">valider</button>
+	<button class="session-opener">valider</button>
+</div>
+
+
+<div class="session-more-time">
+	<form class="session-form" name="session-form" action="http://localhost:8080/init-web-project/" method="post" onsubmit="javascript: return validerSessionForm(this);">
+		<div class="row">
+			<label>Temps en minutes : </label>
+			<input type="text" name="sesmoretime" value="" />
+			<input type="hidden" name="sesgroupe" value="" /> 
+			<input type="hidden" name="sesposte" value="" />
+		</div>
+		<!-- div class="row">
+			<input type="submit" value="valider" />
+			<button class="btn-cancel">annuler</button>
+		</div -->
+	</form>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+
+	$('.session-more-time').data("data", {
+		'titre-poste' : 'titre-poste-test',
+		'titre-groupe' : 'titre-groupe-test'
+	});
+		
+});
+</script>
+
+</body>
+</html>

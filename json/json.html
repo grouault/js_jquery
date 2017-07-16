@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="json.js"></script>
+<link rel="stylesheet" type="text/css" href="json.css">
+</head>
+<body>
+
+<!-- first div. -->
+<div class="item parent-1">
+	<script type="json/init-parent-data">
+	{
+	"id" : "10",
+	"type" : "OFF",
+	"options" : {"seances":false, "permanent":false},
+	"activites" : [1000,889],
+	"themes" : [3364],
+	"publics" : [1002,1003,1004,1005]
+	}
+	</script>
+	bloc-1
+</div>
+
+<!-- second div -->
+<div class="item parent-2">
+	<script type="json/init-parent-data">
+	{
+	"id" : "11",
+	"type" : "OCC",
+	"activites" : [984, 1000],
+	"themes" : [3364],
+	"publics" : [703]
+	}
+	</script>
+	bloc-2
+</div>
+
+<!-- third div -->
+<div class="item parent-3">
+	<script type="json/init-parent-data">
+	{
+	"id" : "12",	
+	"type" : "SOF",
+	"options" : {"seances":true, "permanent":true},
+	"activites" : [1000,1002],
+	"themes" : [3362],
+	"publics" : [1002]
+	}
+	</script>
+	bloc-3
+</div>
+
+<div class="button">
+	<button class="section-add">add</button>
+	<button class="section-remove">remove</button>
+</div>
+
+<div class="select">
+	<select class="select-produit" name="produitSelected" multiple="multiple">
+		<option value="test12">produit-125</option>
+	</select>
+</div>
+
+<hr />
+<!-- select activites -->
+<div class="filter">
+
+	<select name="activites" multiple="multiple" class="activites">
+		<option value="1000">Expositions</option>
+		<option value="901">Explora</option>
+	</select>
+
+	<select name="themes" multiple="multiple">
+		<option value="3364">Catastrophe naturelle</option>
+		<option value="3362">Geologie</option>
+	</select>
+
+	<select name="publics" multiple="multiple">
+		<option value="1003">Famille</option>
+		<option value="1009">Enseignants/Centre de loisirs</option>
+	</select>
+
+</div>
+
+
+</body>
+</html>
