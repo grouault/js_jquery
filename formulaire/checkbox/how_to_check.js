@@ -1,3 +1,5 @@
+this ==> référence le 'input'
+
 // Javascript:
 if (this.check) { ... }
 
