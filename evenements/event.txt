@@ -1,0 +1,34 @@
+Notions liés à évènements :
+---------------------------
+- élément / action / évènement / gestionnaire d'évènement.
+
+Comment est généré un évènement?
+==>L'évènement est généré par une action ou une simulation d'action sur un élément.
+action : click, select ...
+simulation : elt.trigger('...')
+L'action génère un évènement qui se propage.
+
+Comment est peut-on traité un évènement?
+==> L'évènement peut alors être attrapé par un ou plusieurs gestionnaires d'évènements.
+Tous les éléments de l'arborescence du DOM qui sont sous le pointeur de la souris en même temps, peuvent
+logiquement être reponsable de la prise en charge de l'évènement.
+L'évènement a un point de départ (élément déclenchant) et peut avoir plusieurs options de sorties pour son traitement.
+
+'This' et le gestionnaire d'évènement
+-------------------------------------
+Que vaut 'this' dans le gestionnaire d'évènement?
+==> this fait référence à l'élément du DOM auquel le comportement est associé.
+Si le comportement est associé à plusieurs éléments (via l'itération implicite)?
+==> this correspond à l'élément ciblé et diffère donc suivant l'élément qui déclenche l'évènement.
+
+Evènenement, gestionnaire et bouillonement:
+-------------------------------------------
+Principe : Pour éviter la mutliplication des gestionnaire d'évènements, il faut pense à gérer un gestionnaire
+d'évènement unique pour plusieurs éléments à un plus haut niveau. Il faut ensuite gérer les cas particulier en
+fonction du contexte et de l'appelant avec 'this'.
+
+Liste des évènements:
+---------------------
+blur, change, click, dblclick, error, foucus, keydown, keypress, keyup, load, mousedown, mousemove, mouseout, mouseover,
+mouseup, resize, scroll, select, submit, unload.
+
