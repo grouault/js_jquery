@@ -1,0 +1,49 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>http://stackoverflow.com/q/15303531/315935</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="../../js/jquery-ui/css/jquery-ui-1.10.4.custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../js/jqgrid/css/ui.jqgrid.css" />
+    <link rel="stylesheet" type="text/css" href="custom-button-detail.css" />
+    <script type="text/javascript" src="../../js/jquery/js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="../../js/jqgrid/js/i18n/grid.locale-fr.js"></script>
+    <script type="text/javascript" src="../../js/jqgrid/js/jquery.jqGrid.js"></script>
+    <script type="text/javascript" src="custom-button-detail.js"></script>
+    <style type="text/css">
+        html, body { font-size: 75%; }
+        .ui-inline-custom.ui-state-hover span { margin: -1px; }
+    </style>
+    <script type="text/javascript">
+        $.jgrid.no_legacy_api = true;
+        $.jgrid.useJSON = true;
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="content">
+        <div class="table-content">
+            <table id="List1"><tr><td></td></tr></table>
+            <div id="Pager1"></div>
+        </div>
+        <div class="form-content" style="display: none;">
+            <div>Formulair d'édition</div>
+            <form action="#">
+                <ul class="form">
+                    <li class="item">
+                        <label class="item" for="libelle">Libell&eacute;</label>
+                        <input type="text" id="libelle"  />
+                    </li>
+                    <li class="item">
+                        <label class="item" for="articles">Liste des articles&nbsp;</label>
+                        <textarea rows="4" cols="50" id="articles" name="articles" data-bind="regroupementArticle.listeArticle"></textarea>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

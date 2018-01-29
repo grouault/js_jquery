@@ -1,0 +1,9 @@
+.container {
+    width: 100%;
+}
+
+.content {
+    margin-right: auto;
+    margin-left: auto;
+    width: 55%;
+}

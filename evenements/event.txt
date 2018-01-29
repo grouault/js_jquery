@@ -8,7 +8,7 @@ action : click, select ...
 simulation : elt.trigger('...')
 L'action génère un évènement qui se propage.
 
-Comment est peut-on traité un évènement?
+Comment est/peut-on traité un évènement?
 ==> L'évènement peut alors être attrapé par un ou plusieurs gestionnaires d'évènements.
 Tous les éléments de l'arborescence du DOM qui sont sous le pointeur de la souris en même temps, peuvent
 logiquement être reponsable de la prise en charge de l'évènement.
@@ -25,7 +25,7 @@ Evènenement, gestionnaire et bouillonement:
 -------------------------------------------
 Principe : Pour éviter la mutliplication des gestionnaire d'évènements, il faut pense à gérer un gestionnaire
 d'évènement unique pour plusieurs éléments à un plus haut niveau. Il faut ensuite gérer les cas particulier en
-fonction du contexte et de l'appelant avec 'this'.
+fonction du contexte et de l'appelant avec 'event.target'.
 
 Liste des évènements:
 ---------------------

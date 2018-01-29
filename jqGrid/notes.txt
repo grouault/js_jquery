@@ -1,0 +1,16 @@
+http://www.ok-soft-gmbh.com/jqGrid/CustomDelMsg.htm
+http://www.ok-soft-gmbh.com/jqGrid/Admin3_.htm
+
+http://www.trirand.com/jqgridwiki/doku.php?id=wiki:custom_buttons
+http://www.trirand.com/blog/jqgrid/jqgrid.html
+http://www.trirand.com/jqgridwiki/doku.php?id=wiki:form_editing#events2
+http://www.trirand.com/jqgridwiki/doku.php?id=wiki:form_editing
+http://www.trirand.com/jqgridwiki/doku.php?id=wiki:predefined_formatter#predefined_format_types
+
+# Javascript
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error/prototype
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Error
+
+# other.
+https://fr.wikipedia.org/wiki/CRUD
+https://developers.google.com/web/updates/2017/07/devtools-release-notes

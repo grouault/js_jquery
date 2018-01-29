@@ -1,0 +1,153 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Just simple local grid</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <link rel="stylesheet" type="text/css" href="js/jquery-ui/css/jquery-ui-1.10.4.custom.css" />
+    <link rel="stylesheet" type="text/css" href="js/jqgrid/css/ui.jqgrid.css" />
+    <script type="text/javascript" src="js/jquery/js/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="js/jqgrid/js/i18n/grid.locale-fr.js"></script>
+    <script type="text/javascript" src="js/jqgrid/js/jquery.jqGrid.js"></script>
+
+    <script type="text/javascript">
+        //<![CDATA[
+        $(document).ready(function () {
+            var mydata = [
+                    {id:"1", invdate:"2007-10-01",name:"test_test_test_test_test", note:"note", mDeb:'2', mFin:'2', amDeb:'2', amFin:'2', amount:"200.00", tax:"10.00", closed:true, ship_via:"TN",total:"210.00"},
+                    {id:"2", invdate:"2007-10-02",name:"test2222222222222222", note:"note2", mDeb:'2', mFin:'2', amDeb:'2', amFin:'2', amount:"300.00",tax:"20.00",closed:false,ship_via:"FE",total:"320.00"},
+                    {id:"3", invdate:"2007-09-01",name:"test3", note:"note3", mDeb:'2', mFin:'2', amDeb:'2', amFin:'5', amount:"400.00",tax:"30.00",closed:false,ship_via:"FE",total:"430.00"},
+                    {id:"4", invdate:"2007-10-04",name:"test4444444444444444", mDeb:'2', mFin:'2', amDeb:'2', amFin:'5', note:"note4", amount:"200.00",tax:"10.00",closed:true ,ship_via:"TN",total:"210.00"},
+                    {id:"5", invdate:"2007-10-31",name:"test5", note:"note5", mDeb:'2', mFin:'2', amDeb:'5', amFin:'2',  amount:"300.00",tax:"20.00",closed:false,ship_via:"FE",total:"320.00"},
+                    {id:"6", invdate:"2007-09-06",name:"test6", note:"note6", mDeb:'2', mFin:'2', amDeb:'2', amFin:'2',  amount:"400.00",tax:"30.00",closed:false,ship_via:"FE",total:"430.00"},
+                    {id:"7", invdate:"2007-10-04",name:"test7", note:"note7", mDeb:'2', mFin:'2', amDeb:'5', amFin:'2',  amount:"200.00",tax:"10.00",closed:true ,ship_via:"TN",total:"210.00"},
+                    {id:"8", invdate:"2007-10-03",name:"test8", note:"note8", mDeb:'2', mFin:'2', amDeb:'2', amFin:'2',  amount:"300.00",tax:"20.00",closed:false,ship_via:"FE",total:"320.00"},
+                    {id:"9", invdate:"2007-09-01",name:"test9", note:"note9", mDeb:'2', mFin:'2', amDeb:'5', amFin:'2',  amount:"400.00",tax:"30.00",closed:false,ship_via:"TN",total:"430.00"},
+                    {id:"10",invdate:"2007-09-08",name:"test10",note:"note10", mDeb:'2', mFin:'2', amDeb:'2', amFin:'2', amount:"500.00",tax:"30.00",closed:true ,ship_via:"TN",total:"530.00"},
+                    {id:"11",invdate:"2007-09-08",name:"test11",note:"note11", mDeb:'2', mFin:'2', amDeb:'5', amFin:'2', amount:"500.00",tax:"30.00",closed:false,ship_via:"FE",total:"530.00"},
+                    {id:"12",invdate:"2007-09-10",name:"test12",note:"note12", mDeb:'2', mFin:'2', amDeb:'2', amFin:'2', amount:"500.00",tax:"30.00",closed:false,ship_via:"FE",total:"530.00"}
+                ],
+                mygrid = $("#list"),
+                colModel, i, cmi, tr = "<tr>", skip = 0, ths;
+            mygrid.jqGrid({
+                datatype:'local',
+                data: mydata,
+                colNames:['Inv No','Date','Client A','Client B','mDeb','mFin','amDeb','amFin','Amount','Tax','Total','Closed','Shipped via','Notes'],
+                colModel:[
+                    {name:'id',index:'id',width:70,align:'center',sorttype: 'int'},
+                    {name:'invdate',index:'invdate',width:80, align:'center', sorttype:'date',
+                        formatter:'date', formatoptions: {newformat:'d-M-Y'}, datefmt: 'd-M-Y'},
+                    {name:'name',index:'name', width:70,
+                        cellattr: function(rowId, tv, rawObject, cm, rdata) {
+                            if (Number(rowId) < 5) { return ' colspan=2' }} },
+                    {name:'nameB',index:'nameB', width:70,
+                        cellattr: function(rowId, tv, rawObject, cm, rdata) {
+                            if (Number(rowId) < 5) { return ' style="display:none;"' }}},
+
+                    {name:'mDeb',index:'mDeb',width:100, formatter:'number', align:'right', classes:'creneau creneau-deb matin jour lundi'},
+                    {name:'mFin',index:'mFin',width:100, formatter:'number', align:'right', classes:'creneau creneau-fin'},
+                    {name:'amDeb',index:'amDeb',width:100, formatter:'number', align:'right', classes:'creneau creneau-deb apres-midi'},
+                    {name:'amFin',index:'amFin',width:100, formatter:'number', align:'right', classes:'creneau creneau-fin'},
+
+                    {name:'amount',index:'amount',width:100, formatter:'number', align:'right'},
+                    {name:'tax',index:'tax',width:70, formatter:'number', align:'right'},
+                    {name:'total',index:'total',width:120, formatter:'number', align:'right'},
+                    {name:'closed',index:'closed',width:110,align:'center', formatter: 'checkbox',
+                        edittype:'checkbox',editoptions:{value:'Yes:No',defaultValue:'Yes'}},
+                    {name:'ship_via',index:'ship_via',width:120,align:'center',formatter:'select',
+                        edittype:'select',editoptions:{value:'FE:FedEx;TN:TNT;IN:Intim',defaultValue:'Intime'}},
+                    {name:'note',index:'note',width:100,sortable:false}
+                ],
+                rowNum:10,
+                rowList:[5,10,20],
+                pager: '#pager',
+                gridview:true,
+                rownumbers:true,
+                sortname: 'invdate',
+                viewrecords: true,
+                sortorder: 'desc',
+                caption:'Just simple local grid',
+                height: '100%'
+            });
+
+            // ajout de 3 lignes supplementaires
+            var trHeadFirst = $("thead:first tr", mygrid[0].hdiv);
+            console.log('trHeadFirst = ', trHeadFirst);
+            var colModel = mygrid[0].p.colModel;
+
+            // apply class to header
+            for (var iCol = 0; iCol < colModel.length; iCol++) {
+                var columnInfo = colModel[iCol];
+                if (columnInfo.classes) {
+                    var $thElt = $("th:eq(" + iCol + ") div", trHeadFirst).closest('th');
+                    $thElt.addClass(columnInfo.classes);
+                }
+            }
+
+            // clone
+            var $clone = trHeadFirst.clone().addClass('one')
+                .after(
+                    trHeadFirst.clone().addClass('second')
+                        .find(':not(th.creneau-deb)').remove()
+                        .end()
+                        .after(
+                            trHeadFirst.clone().addClass('third')
+                                .find(':not(th.creneau)').remove().end()
+                        )
+                );
+            console.log('clone = ', $clone);
+
+            trHeadFirst.after($clone);
+
+            var trHeadOne = $('thead').find('tr.one');
+            var trHeadScnd = $('thead').find('tr.second');
+            var trHeadThird = $('thead').find('tr.third');
+
+            trHeadThird.find('th').each(function () {
+                if ( $(this).hasClass('creneau-deb') ) {
+                    $(this).text('deb');
+                }
+                if ( $(this).hasClass('creneau-fin') ) {
+                    $(this).text('fin');
+                }
+            });
+
+            trHeadScnd.find('th').each(function () {
+                if ($(this).hasClass('creneau-deb')) {
+                    $(this).attr('colspan',2);
+                    if ( $(this).hasClass('matin') ) {
+                        $(this).text('matin');
+                    }
+                    if ( $(this).hasClass('apres-midi') ) {
+                        $(this).text('après-midi');
+                    }
+                }
+            });
+
+            trHeadOne.find(':not(th.creneau)').attr('rowspan', 3);
+            trHeadOne.find('th.creneau').each(function () {
+                if ($(this).is(':not(.jour)')) {
+                    $(this).remove();
+                } else {
+                    $(this).attr('colspan', 4).text('Lundi');
+                }
+            });
+
+            trHeadFirst.find('th')
+                .find('div').remove().end()
+                .find('span').remove().end();
+
+            trHeadFirst.find('th').css({
+                'height':'1px'
+            });
+
+        });
+        //]]>
+    </script>
+</head>
+<body>
+<table id="list"><tr><td/></tr></table>
+<div id="pager"></div>
+</body>
+</html>
