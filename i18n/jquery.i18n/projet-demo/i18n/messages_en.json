@@ -1,0 +1,13 @@
+{
+  "@metadata": {
+    "authors": [
+      "Gildas"
+    ],
+    "last-updated": "2020-07-17",
+    "locale": "en",
+    "message-documentation": "qqq",
+    "AnotherMetadata": "AnotherMedatadataValue"
+  },
+  "welcome": "Welcome",
+  "message_from": "$1 has send you $2 {{plural:$2|message|messages}}. {{gender:$3|He|She}} is waiting for your response!"
+}
