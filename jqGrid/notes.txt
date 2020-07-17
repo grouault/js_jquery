@@ -14,3 +14,14 @@ https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Objets_globaux/Er
 # other.
 https://fr.wikipedia.org/wiki/CRUD
 https://developers.google.com/web/updates/2017/07/devtools-release-notes
+
+# Style et mise en forme
+- Taille des polices : agir par css sur les classes suivantes
+.ui-jqgrid .ui-jqgrid-view {
+  font-size: 0.95em;
+}
+
+# Taille du tableau
+Responsive ==> ???
+
+# Mode edtion
